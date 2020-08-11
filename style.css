@@ -1,91 +1,63 @@
 * {
     margin: 0;
-    height: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.wrapper {
-    width: 100vw;
-    min-height: 100vh;
-    background: linear-gradient(#fff);
-    text-align: center;
-}
-
-.popup {
-    position: fixed;
+.wrapper__body {
     width: 100vw;
     height: 100vh;
-    /* background-color: grey; */
-
-    top: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.popup__body {
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 10px; 
+    flex-direction: column;
 }
 
-.popup__text {
-    margin-top: 30px;
-    color: royalblue;
-    font-size: 30px;
+.popup-1,
+.popup-2 {
+    width: 500px;
+    height: 500px;
+    border: 3px solid olive;
+    display: none;
+    text-align: center;
 }
 
-.popup:target {
-    opacity: 1;
-    visibility: visible;
-}
-
-
-.popup__close {
+.popup-1__close,
+.popup-2__close {
     position: absolute;
-    right: 50px;
-    top: 20px;
-    font-size: 20px;
-    color: black;
-    text-decoration: none;
+    left: 61.5%;
+    color: red;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .popup-open {
-    text-decoration: none;
-    font-size: 2rem;
-}
-.popup__open {
-    display: block;
-    width: 230px;
-    height: 50px;
-}
-
-.content__wrapper {
-    text-align: left;
-}
-
-.popup__content {
-    border-radius: 50px;
-    color: #000;
-    border: 10px solid bisque;
-    max-width: 800px;
-    min-height: 500px;
-    padding: 30px 10px;
-    position: relative;
-}
-
-.content__wrapper {
-    width: 100vw;
+    margin-bottom: 10%;
     display: flex;
-    justify-content: center;
 }
 
-.popup__title {
-    position: relative;
-    left: 38%;
-    top: 0;
-    margin-bottom: 30px;
+.popup-1-open,
+.popup-2-open {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #bbb;
+    text-align: center;
+    margin: 10px;
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+.popup-1__text,
+.popup-2__text {
+    font-size: 2rem;
+    color: black;
+    font-style: italic;
+}
+.popup-1__about,
+.popup-2__about {
     font-size: 1.3rem;
+    color: darkgrey;
+    margin-top: 20px;
+    padding: 10px;
 }
